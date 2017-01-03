@@ -10,6 +10,8 @@ class DestinationsController < ApplicationController
   # GET /destinations/1
   # GET /destinations/1.json
   def show
+    @destination = Destination.find(params[:id])
+    @forecast_days = WundergroundForecast.ten_day(@destination.zip)
   end
 
   # GET /destinations/new

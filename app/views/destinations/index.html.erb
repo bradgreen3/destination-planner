@@ -6,7 +6,7 @@
 
   <div class="row">
   <% @destinations.each do |destination| %>
-    <div class="col-sm-6 col-med-4 col-xs-12">
+    <div class="col-sm-6 col-med-4 col-xs-12" id="dest-<%=destination.id%>">
       <h4><%= destination.name %></h4>
       <p><%= destination.zip %></p>
       <p><%= destination.description %></p>
